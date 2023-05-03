@@ -12,7 +12,7 @@ public class StanzaBuia  extends Stanza{
 @Override
 	public String getDescrizione() {
 		String buio=new String();
-<<<<<<< HEAD
+
 	    buio="qui c'e' un buio pesto";
 		if(!this.hasAttrezzo(attrezzoLucente)) {
 		   return buio;
@@ -24,12 +24,4 @@ public class StanzaBuia  extends Stanza{
 	
 }
 
-=======
-	   buio="qui c'è un buio pesto";
-		if(!this.hasAttrezzo(attrezzoLucente));
-		return buio;
-		
-}
 	
-}
->>>>>>> 6138fadd6aaa567cd0f685c4df57ca68d25bf4f6
