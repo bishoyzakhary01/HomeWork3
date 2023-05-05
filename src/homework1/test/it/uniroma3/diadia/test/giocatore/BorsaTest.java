@@ -52,7 +52,7 @@ public class BorsaTest {
 	}
 	
 	@Test
-	public void   () {
+	public void  addAttrezzotest() {
 		b.addAttrezzo(test3);
 		b.addAttrezzo(test1);
 		assertEquals(b.getPesoMax(), this.b.getPeso());
