@@ -8,20 +8,28 @@ import org.junit.Test;
 
 import it.uniroma3.diadia.Partita;
 import it.uniroma3.diadia.ambienti.Labirinto;
+
 import it.uniroma3.diadia.ambienti.Stanza;
-import it.uniroma3.diadia.giocatore.Giocatore;
+import it.uniroma3.diadia.attrezzi.LabirintoBuilder;
+
 
 public class PartitaTest {
 
-	Partita p =new Partita();
-	Stanza  s =new Stanza("Biblioteca");
-	Labirinto l = new Labirinto();
-	Giocatore g= new Giocatore();
+
+	Labirinto labirinto;
+	Partita p;
+	Stanza s;
 	
 	@Before
 	public void setUp() {
-	g.setCfu(0);
-	p.setGiocatore(g);
+		labirinto = new LabirintoBuilder()
+				.addStanzaIniziale("Atrio")
+				.addAttrezzo("martello", 3)
+				.addStanzaVincente("Biblioteca")
+				.addAdiacenza("Atrio", "Biblioteca", "nord")
+				.getLabirinto();
+		 p = new Partita(labirinto);
+		 s = new Stanza("Stanza");
 		
 	}
 	

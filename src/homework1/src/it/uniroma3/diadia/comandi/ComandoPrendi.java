@@ -1,7 +1,6 @@
 package it.uniroma3.diadia.comandi;
 
 import it.uniroma3.diadia.IO;
-import it.uniroma3.diadia.IOConsole;
 import it.uniroma3.diadia.Partita;
 import it.uniroma3.diadia.attrezzi.Attrezzo;
 
@@ -9,7 +8,7 @@ public class ComandoPrendi implements Comando {
 
 	private String nomeAttrezzo;
 	private String nomeComando = "prendi" ;
-	public IO io= new IOConsole();
+	public IO io;
 	
 	@Override
 	public void esegui(Partita partita) {
@@ -37,6 +36,12 @@ public class ComandoPrendi implements Comando {
 	@Override
 	public String getNome() {
 		return this.nomeComando;
+	}
+
+	@Override
+	public void setIo(IO io) {
+		// TODO Auto-generated method stub
+		this.io=io;
 	}
 
 

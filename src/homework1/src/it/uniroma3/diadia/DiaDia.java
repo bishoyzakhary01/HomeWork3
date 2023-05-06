@@ -1,7 +1,7 @@
 package it.uniroma3.diadia;
 
 import it.uniroma3.diadia.ambienti.Labirinto;
-import it.uniroma3.diadia.ambienti.LabirintoBuilder;
+import it.uniroma3.diadia.attrezzi.LabirintoBuilder;
 import it.uniroma3.diadia.comandi.Comando;
 import it.uniroma3.diadia.comandi.FabbricaDiComandiFisarmonica;
 
@@ -33,9 +33,9 @@ public class DiaDia {
 	private Partita partita;
 	private IO io;
 	
-	public DiaDia(IO console) {
-		this.io=console;
-		this.partita=new Partita();
+	public DiaDia(IO console, Labirinto labirinto) {
+		this.io = console;
+		this.partita = new Partita(labirinto);
 	}
 
 	public void gioca() {
@@ -53,8 +53,7 @@ public class DiaDia {
 		comandoDaEseguire = factory.costruisciComando(istruzione);
 		comandoDaEseguire.esegui(this.partita);
 		if (this.partita.vinta())
-
-			io.mostraMessaggio(istruzione);;
+              io.mostraMessaggio(istruzione);;
 		if (this.partita.getGiocatore().getCfu()==0)
 
 			io.mostraMessaggio("Hai esaurito i CFU...");

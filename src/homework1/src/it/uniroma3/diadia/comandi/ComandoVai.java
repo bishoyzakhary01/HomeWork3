@@ -13,8 +13,7 @@ public class ComandoVai implements Comando {
 
 	private String direzione;
 	private String nomeComando = "vai";
-	public IO io= new IOConsole();
-	
+	public IO io;
 
 	@Override
 	public void esegui(Partita partita) {
@@ -52,5 +51,9 @@ public class ComandoVai implements Comando {
 	public String getNome() {
 		return this.nomeComando;
 	}
-
+	@Override
+	public void setIo(IO io) {
+	this.io=io;	
+	}
+	
 }

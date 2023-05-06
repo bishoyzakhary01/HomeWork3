@@ -1,13 +1,13 @@
 package it.uniroma3.diadia.comandi;
 
 import it.uniroma3.diadia.IO;
-import it.uniroma3.diadia.IOConsole;
+
 import it.uniroma3.diadia.Partita;
 
 public class ComandoFine implements Comando {
 	
 	private String nomeComando = "fine";
-	public IO io = new IOConsole();
+	private IO io;
 
 	@Override
 	public void esegui(Partita partita) {
@@ -25,6 +25,18 @@ public class ComandoFine implements Comando {
 	@Override
 	public String getNome() {
 		return this.nomeComando;
+	}
+
+	@Override
+	public void setIo(IO io) {
+		// TODO Auto-generated method stub
+		this.io=io;
+	}
+
+	@Override
+	public String getParametro() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

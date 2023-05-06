@@ -59,4 +59,10 @@ public class ComandoPosa implements Comando{
 		return this.nomeComando;
 	}
 
+	@Override
+	public void setIo(IO io) {
+		// TODO Auto-generated method stub
+		this.io=io;
+	}
+
 }
