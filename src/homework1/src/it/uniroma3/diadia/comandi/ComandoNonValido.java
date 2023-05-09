@@ -6,6 +6,11 @@ import it.uniroma3.diadia.Partita;
 
 public class ComandoNonValido implements Comando {
 
+	public ComandoNonValido(IO io) {
+		super();
+		this.io = io;
+	}
+
 	private String nomeComando = "";
 	public IO io;
 

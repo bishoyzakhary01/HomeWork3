@@ -1,28 +1,23 @@
-package it.uniroma3.diadia.attrezzi;
+package it.uniroma3.diadia.ambienti;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import it.uniroma3.diadia.ambienti.Labirinto;
-import it.uniroma3.diadia.ambienti.Stanza;
-import it.uniroma3.diadia.ambienti.StanzaBloccata;
-import it.uniroma3.diadia.ambienti.StanzaBuia;
-import it.uniroma3.diadia.ambienti.StanzaMagica;
 import it.uniroma3.diadia.attrezzi.Attrezzo;
 
 public class LabirintoBuilder {
 
 	private Labirinto labirinto;
 	private Stanza ultimaStanzaAggiunta;
-	private Map<String, Stanza> nome2stanza;
+	private Map<String, Stanza> nome;
 
 	public LabirintoBuilder() {
 		this.labirinto = new Labirinto();
-		this.nome2stanza = new HashMap<String, Stanza>();
+		this.nome = new HashMap<String, Stanza>();
 	}
 	
 	public Map<String, Stanza> getNome2stanza() {
-		return nome2stanza;
+		return nome;
 	}
 
 	public Labirinto getLabirinto() {
@@ -58,8 +53,8 @@ public class LabirintoBuilder {
 	}
 
 	public LabirintoBuilder addAdiacenza(String stanzaCorrente, String stanzaAdiecente, String direzione) {
-		Stanza c = this.nome2stanza.get(stanzaCorrente);
-		Stanza a = this.nome2stanza.get(stanzaAdiecente);
+		Stanza c = this.nome.get(stanzaCorrente);
+		Stanza a = this.nome.get(stanzaAdiecente);
 		c.impostaStanzaAdiacente(direzione, a);
 		return this;
 	}
@@ -84,6 +79,6 @@ public class LabirintoBuilder {
 	
 	public void UltimaStanzaAggiuntaEAggiorna(Stanza stanza) {
 		this.ultimaStanzaAggiunta = stanza;
-		this.nome2stanza.put(stanza.getNome(), stanza);
+		this.nome.put(stanza.getNome(), stanza);
 	}
 }

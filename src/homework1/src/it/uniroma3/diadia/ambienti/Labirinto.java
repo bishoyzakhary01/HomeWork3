@@ -1,16 +1,18 @@
 package it.uniroma3.diadia.ambienti;
 
-
-//import it.uniroma3.diadia.attrezzi.Attrezzo;
-import it.uniroma3.diadia.attrezzi.LabirintoBuilder;
-
 public class Labirinto {
-	 /**
+	
+	 public Labirinto() {
+		
+	}
+	/**
      * Crea tutte le stanze e le porte di collegamento
      */
 	private Stanza stanzaCorrente;
 	private Stanza stanzaVincente;
 	//creaStanze();
+	
+	
    public void creaStanze() {
 
 		/*//crea gli attrezzi 

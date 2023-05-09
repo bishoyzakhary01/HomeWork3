@@ -7,7 +7,12 @@ import it.uniroma3.diadia.Partita;
 public class ComandoGuarda implements Comando{	
 	
 	
-    public IO io;
+    public ComandoGuarda(IO io) {
+		super();
+		this.io = io;
+	}
+
+	public IO io;
 	private String nomeComando = "guarda";
 
 	//stampa le informazioni sulla stanza corrente 

@@ -6,6 +6,11 @@ import it.uniroma3.diadia.attrezzi.Attrezzo;
 
 public class ComandoPrendi implements Comando {
 
+	public ComandoPrendi(IO io) {
+		super();
+		this.io = io;
+	}
+
 	private String nomeAttrezzo;
 	private String nomeComando = "prendi" ;
 	public IO io;

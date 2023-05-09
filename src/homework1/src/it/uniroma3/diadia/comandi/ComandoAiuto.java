@@ -5,10 +5,16 @@ import it.uniroma3.diadia.IO;
 import it.uniroma3.diadia.Partita;
 
 public  class ComandoAiuto implements Comando {
-
 	static final public String[] elencoComandi = {"vai", "aiuto","prendi" ,"posa","fine", "guarda"};
 	private IO io ;
 	private final static String nomeComando = "aiuto";
+	
+	
+	public ComandoAiuto(IO io) {
+		super();
+		this.io = io;
+	}
+
 	@Override
 	public void esegui(Partita partita) {
 		// TODO Auto-generated method stub

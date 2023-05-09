@@ -9,9 +9,19 @@ import it.uniroma3.diadia.giocatore.Borsa;
 
 public class ComandoPosa implements Comando{
 	
+	public ComandoPosa(IO io) {
+		super();
+		this.io = io;
+	}
+
+	@Override
+	public String toString() {
+		return "ComandoPosa [io=" + io + "]";
+	}
+
 	private String nomeAttrezzo;
     private String nomeComando= "posa" ;
-    public IO io = new IOConsole();
+    public IO io ;
 	
 	@Override
 	public void esegui(Partita partita) {
